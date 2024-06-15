@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .test{
+            max-width: 1580px;
+            margin: auto;
+        }
+        .responsive{
+            float: left;
+            padding: 0px 5px;
+            width: 25%;
+        }
+        .gallery{
+            border: 1px solid black;
+        }
+        .gallery img{
+            width: 100%;
+            height: 350px;
+        }
+        .description{
+          text-align: center;
+          padding: 5px;
+        }
+        @media screen and (max-width:770px){
+          .test .responsive{
+            width: 50%;
+          }
+        }
+        @media screen and (max-width:576px){
+          .test .responsive{
+            width: 100%;
+          }
+        }
+        .hi{
+          position: absolute;
+          top: 400px;
+          left: 20px;
+        }
+        .section{
+          counter-reset: section;
+        }
+        h1::before{
+          counter-increment : section;
+          content: "section  " counter(section) " : ";
+        }
+        .demo{
+          width: 100px;
+          height: 100px;
+          background:url(sprite.gif) 1149px 589px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="test">
+      <div class="responsive">
+        <div class="gallery">
+          <a href="facebook.png"><img src="facebook.png" alt="facebook" /></a>
+          <div class="description">
+            <p>Create an account in Facebook</p>
+          </div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a href="facebook.png"><img src="facebook.png" alt="facebook" /></a>
+          <div class="description">
+            <p>Create an account in Facebook</p>
+          </div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a href="facebook.png"><img src="facebook.png" alt="facebook" /></a>
+          <div class="description">
+            <p>Create an account in Facebook</p>
+          </div>
+        </div>
+      </div>
+      <div class="responsive">
+        <div class="gallery">
+          <a href="facebook.png"><img src="facebook.png" alt="facebook" /></a>
+          <div class="description">
+            <p>Create an account in Facebook</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
+<h2><li>Counters</li></h2>
+    <div class="section">
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+       <h1>niraj jmabucha</h1>
+    </div>
+    <h2><li>imges sprites</li></h2>
+    <div class="demo"></div>
+    <img src="sprite.gif" alt="sprite">
+  </body>
+</html> 

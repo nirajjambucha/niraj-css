@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+      }
+      #perant {
+        background-color: rgb(78, 153, 153);
+        padding: 5px;
+        height: 300px;
+        width: 400px;
+        margin: auto;
+        position: relative;
+      }
+      .perant1 {
+        background-color: blue;
+        padding: 3px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: white;
+        position: relative;
+        top: 135px;
+        left: 5px;
+      }
+      .perant2 {
+        background-color: red;
+        padding: 3px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: black;
+        position: relative;
+        top: 85px;
+        left: 335px;
+      }
+      #perant1 {
+        background-color: rgb(78, 153, 153);
+        padding: 5px;
+        height: 300px;
+        width: 400px;
+        margin: auto;
+        position: relative;
+      }
+      .perant3 {
+        background-color: blue;
+        padding: 3px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: white;
+        position: absolute;
+        top: 93px;
+        right: 5px;
+      }
+      .perant4 {
+        background-color: red;
+        padding: 3px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        color: black;
+        position: absolute;
+        top: 93px;
+        left: 5px;
+      }
+      ul {
+        background-color: skyblue;
+        list-style: none;
+        display: flex;
+        position: sticky;
+        top: 0;
+      }
+      li {
+        padding: 20px;
+      }
+      button {
+        height: 50px;
+        width: 70px;
+        padding: 5px;
+        background-color: black;
+        color: white;
+        border: 2px solid gray;
+        border-radius: 20px;
+
+        position: fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <h1><li>position</li></h1>
+    <h1><li>sticky</li></h1>
+    <ul>
+      <li>home</li>
+      <li>home</li>
+      <li>home</li>
+    </ul>
+    <hr />
+
+    <button>fixed</button>
+    <hr />
+    <h1><li>absolute</li></h1>
+    <div id="perant">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        totam cupiditate repellat quia nemo quidem iusto assumenda soluta,
+        doloremque et aspernatur ut sed, earum hic ea itaque dignissimos
+        consectetur eos.
+      </p>
+      <p class="perant1">hello</p>
+      <p class="perant2">hello</p>
+    </div>
+    <hr />
+    <h1><li>relative</li></h1>
+    <div id="perant1">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis
+        totam cupiditate repellat quia nemo quidem iusto assumenda soluta,
+        doloremque et aspernatur ut sed, earum hic ea itaque dignissimos
+        consectetur eos.
+      </p>
+      <p class="perant3">hello</p>
+      <p class="perant4">hello</p>
+    </div>
+    <hr />
+    <h1><li>position property</li></h1>
+    <pre>
+
+          relative => perant
+          absolute => child
+          sticky
+          fixed
+          static
+
+
+    </pre>
+    <hr />
+  </body>
+</html>

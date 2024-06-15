@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        /* descendent selestors */
+        .hi1 p{
+            color: red;
+        }
+
+        /* child selestors (>) */
+        .hi2 > p{
+            color: red; 
+        }
+
+        /* adjacent sibling selestors (+) */
+        .hi3 + p{
+             color: red;
+        }
+
+        /* general sibling selectors (~) */
+        .hi4 ~ p{
+            color: red;
+        }
+
+        /* css = pseudo classes */
+        a{
+            color: red;
+        }
+        .hi5{
+            color: black;
+        }
+        .hi6 .hi7{
+                    background-color: black;
+                    color: white;
+                    border: 5px solid gray;
+                    border-radius: 10px;
+                    padding: 10px;
+                    font-size: 20px;
+                    width: 120px;
+                    display: none;
+        }
+        .hi6:hover .hi7{
+            display: block;
+        }
+
+        /* first child pseudo class */ 
+        .hi8 p:first-child{
+               color: red;
+        }
+
+        /* first i elements in all p elements */
+        .hi9 p i:first-child{
+            color: red;
+        }
+
+        /* match all i elements */
+        .hi10 p:first-child i{
+         color: red;
+        }
+
+        /* pseudo elements */
+        /* first-letter */
+        .hi11::first-letter{
+            color: red;
+        }
+        /* first-line */
+        .hi12::first-line{
+            color: red;
+        }
+        /* content => after */
+        .hi13 p::after{
+              content:url(about2.jpg);
+        }
+         /* content => before */
+         .hi14 p::before{
+              content:url(about2.jpg);
+        }
+        /* marker */
+        .hi15::marker{
+            color: rgb(255, 0, 0);
+        }
+        /* selection */
+        .hi16 p::selection{
+            background-color: black;
+            color: white;
+        }
+
+        /* attributes selectors */
+        .hi17 a[target]{
+            color: black;
+        }
+        .hi18 a[target="_blank"]{
+            color: black;
+        }
+
+        
+        /* tilde (~) */
+        [title~="imges"]{
+             border: 5px solid red ;
+        }
+
+        /* first match (|) */
+        [class|="niraj"]{
+            color: red;
+        }
+
+        /* first match (^) */
+        [class^="top"]{
+         color: red;
+        }
+
+        /* last match ($) */
+        [class$="right"]{
+         color: red;
+        }
+
+        /* all match (*) */
+        [class*="m"]{
+         color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>css => combinators</h1>
+    <h2><li>descendent selestors</li></h2>
+    <div class="hi1">
+       <p>Paragraph (1)</p>
+       <p>Paragraph (2)</p>
+       <p>Paragraph (3)</p>
+       <section>
+        <p>Paragraph (1)</p>
+       </section>
+    </div>
+
+    <h2><li>child selestors (>)</li></h2>
+    <div class="hi2">
+       <p>Paragraph (1)</p>
+       <p>Paragraph (2)</p>
+       <p>Paragraph (3)</p>
+       <section>
+        <p>Paragraph (1)</p>
+       </section>
+    </div>
+
+    <h2><li>adjacent sibling selestors (+)</li></h2>
+    <div class="hi3">
+        <p>Paragraph (1)</p>
+        <p>Paragraph (2)</p>
+        <p>Paragraph (3)</p>
+    </div>
+    <p>Paragraph (4)</p>
+    <p>Paragraph (5)</p>
+    <p>Paragraph (6)</p>
+    <div class="hi3"> 
+        <p>Paragraph (7)</p>
+        <p>Paragraph (8)</p>
+        <p>Paragraph (9)</p>
+    </div>
+    <p>Paragraph (10)</p>
+    <p>Paragraph (11)</p>
+    <p>Paragraph (12)</p>
+
+    <h2><li>general sibling selectors (~)</li></h2>
+    <div class="hi4">
+        <p>Paragraph (1)</p>
+        <p>Paragraph (2)</p>
+        <p>Paragraph (3)</p>
+    </div>
+    <p>Paragraph (1)</p>
+    <p>Paragraph (2)</p>
+    <p>Paragraph (3)</p>
+
+    <h2><li>css => pseudo classes</li></h2>
+    <a href="#">home</a>
+    <a href="#" class="hi5">home</a>
+    <br><br>
+    <div class="hi6">
+         <b>click me and show the magic</b>
+        <p class="hi7">niraj jambucha</p>
+    </div>
+
+   <h2><li>first child pseudo class</li></h2>
+   <div class="hi8">
+   <p>Paragraph (1)</p>
+   <p>Paragraph (2)</p>
+   <div>
+    <p>Paragraph (1)</p>
+    <p>Paragraph (2)</p>
+   </div>
+</div>
+
+ <h2><li>first i elements in all p elements</li></h2>
+ <div class="hi9">
+ <p>Lorem <i>Lorem</i> ipsum <i>Lorem</i> dolor <i>Lorem</i> sit <i>Lorem</i> amet.</p>
+</div>
+
+<h2><li>match all i elements</li></h2>
+<div class="hi10">
+<p>Lorem <i>Lorem</i> ipsum <i>Lorem</i> dolor <i>Lorem</i> sit <i>Lorem</i> amet.</p>
+</div>
+
+<h2><li>pseudo elements</li></h2>
+<h3><li>first-letter</li></h3>
+<div class="hi11">
+    <p>Paragraph (1) <br> Paragraph (2)</p>
+</div>
+<h3><li>first-line</li></h3>
+<div class="hi12">
+    <p>Paragraph (1) <br> Paragraph (2)</p>
+</div>
+<h3><li>content => after</li></h3>
+<div class="hi13">
+    <p>content after imges</p>
+</div>
+<h3><li>content => before</li></h3>
+<div class="hi14">
+    <p>content before imges</p>
+</div>
+<h3><li>marker</li></h3>
+<ul>
+    <li class="hi15">niraj</li>
+    <li class="hi15">niraj</li>
+    <li class="hi15">niraj</li>
+</ul>
+<h3><li>selection</li></h3>
+<div  class="hi16">
+    <p>niraj jambucha</p>
+</div>
+
+<h2><li>attributes selectors</li></h2>
+<div class="hi17">
+    <a href="#">home</a>
+    <a href="#">home</a>
+    <a href="#" target="_parent">home</a>
+</div>
+<div class="hi18">
+    <a href="#">home</a>
+    <a href="#" target="_blank">home</a>
+    <a href="#" target="_parent">home</a>
+</div>
+<br>
+    <h2><li> tilde (~)</li></h2>
+    <img src="facebook.png" alt="" width="50px" title="imges">
+    <img src="whatsapp.png" alt="" width="50px" title="imges">
+    <img src="instagram.png" alt="" width="50px" >
+
+ 
+ <h2><li>- match (|)</li></h2>
+ <div>
+    <p class="niraj-jambucha">niraj jambucha</p>
+    <p class="nirajjambucha">niraj jambucha</p>
+    <p class="niraj-jambucha">niraj jambucha</p>
+ </div>
+
+ <h2><li>first match (^)</li></h2>
+ <div>
+    <p class="top-last">niraj jambucha</p>
+    <p class="top-last">niraj jambucha</p>
+    <p class="last-top">niraj jambucha</p>
+ </div>
+
+ <h2><li>last match ($)</li></h2>
+ <div>
+    <p class="right-raj">niraj jambucha</p>
+    <p class="raj-right">niraj jambucha</p>
+    <p class="raj-right">niraj jambucha</p>
+ </div>
+
+ <h2><li>all match (*)</li></h2>    
+ <div>
+    <p class="jambucha">niraj jambucha</p>
+    <p class="jabucha">niraj jambucha</p>
+    <p class="jambucha">niraj jambucha</p>
+ </div>
+</body>
+</html> 

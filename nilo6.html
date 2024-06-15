@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>css</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+      .item1{
+         grid-area:header;
+      }
+      .item2{
+         grid-area:banner;
+      }
+      .item3{
+         grid-area:menu;
+      }
+      .item4{
+         grid-area:main;
+      }
+      .item5{
+         grid-area:right;
+      }
+      .item6{
+         grid-area:footer;
+      }
+      .grid-container{
+         background-color: rgb(41, 73, 86);
+         display: grid;
+         grid-template-areas:
+         'header header header header header header'
+         'banner banner banner banner banner banner'
+         'menu menu main main right right'
+         'footer footer footer footer footer footer';
+      }
+      nav{
+         background-color: rgb(62, 100, 115);
+         display: flex;
+         height: 60px;
+         justify-content: space-between;
+      }
+      nav .logo{
+         display:flex;
+         align-self: center;
+      }
+      .logo img{
+         padding: 0 0 0 30px;
+      }
+      nav ul{
+         display: flex;
+         align-items: center;
+         overflow: hidden;
+         list-style: none;
+      }
+      nav ul li{
+         padding: 8px 30px;
+      }
+      nav ul li a{
+         text-decoration: none;
+         color: white;
+         font-size: 20px;
+      }
+      nav ul li a:hover{
+          transition: all 1s;
+          color: black;
+      }
+      .search{
+         display: flex;
+         align-items: center;  
+         justify-content: flex-end;
+      }
+      .search input{
+         width: 400px;
+         height: 30px;
+         border: none;
+         border-radius: 10px;
+      }
+      .search .btn{
+         background-color: rgb(39, 39, 194);
+         color: white;
+         padding: 6px 16px;
+         border: none;     
+         border-radius: 10px;
+         font-size: 18px;
+         margin: 0 20px;    
+      }
+      .item2{
+         background-image: url(about2.jpg);
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+         height: 900px;
+      }
+      footer{
+            width: 100%;
+            position: absolute;
+            background: linear-gradient(to right, #00093c, #2d0b00);
+            color: #fff;
+            padding: 100px 0 30px;
+            /* border-top-left-radius: 100px; */
+            font-size: 13px;
+            line-height: 20px;
+        }
+        .row{
+            width: 85%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        .col{
+            flex-basis: 25%;
+            padding: 10px;
+        }
+        .col:nth-child(2),.col:nth-child(3){
+            flex-basis: 15%;
+        }
+        .col h3{
+            width: fit-content;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .email-id{
+            width: fit-content;
+            border-bottom: 1px solid #ccc;
+            margin: 20px 0;
+        }
+        ul li{
+            list-style: none;
+            /* margin-bottom: 12px; */
+        }
+        ul li a{
+            text-decoration: none;
+            color: #fff;
+        }
+        form{
+            padding-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 50px;
+        }
+        form .far{
+              
+                 margin-right: 10px;       
+        }
+        form input{
+            width: 100%;
+            background: transparent;
+            color: #ccc;
+            border: 0;
+            outline: none;
+        }
+        form button{
+            background: transparent;
+            border: 0;
+            outline: none;
+            cursor: pointer;
+        }
+        form button .fas{
+            font-size: 16px;
+            color: #ccc;
+        }
+        .col-1 i{
+            line-height: 40px;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+       hr{
+        width: 90%;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        margin: 20px auto;
+       }
+       .demo{
+              text-align: center;
+       }
+       .underline{
+                    width: 100%;
+                    height: 5px;
+                    background: #767676;
+                    border-radius: 3px;
+                    position: absolute; 
+                    top: 25px;
+                    left: 0;  
+                    overflow: hidden;                  
+       }
+       .underline span{
+                     width: 15px;
+                     height: 100%;
+                     background: #fff;
+                     border-radius: 3px;
+                     position: absolute;
+                     top: 0;
+                     left: 10px;
+                     animation: moving 2s linear infinite;
+       }
+        @keyframes moving{
+            0%{
+                left: -20px;
+            }
+            100%{
+                left: 100%;
+            }
+        }
+        @media (max-width: 700px){
+            footer{
+                bottom: unset;
+            }
+            .col{
+                flex-basis: 100%;
+            
+            }
+            .col:nth-child(2),.col:nth-child(3){
+                flex-basis: 100%;
+            }
+        }
+        .item3 p{
+         text-align: center;
+         background-color: #767676;
+         padding: 20px;
+         width: 200px;
+         border: 5px solid black;
+         border-radius: 10px;
+         position: relative;
+         bottom: 40px;
+         left: 200px;
+        }
+        .item4 p{
+         text-align: center;
+         background-color: #767676;
+         padding: 20px;
+         width: 200px;
+         border: 5px solid black;
+         border-radius: 10px;
+         position: relative;
+         bottom: 40px;
+         left: 200px;
+        }
+        .item5 p{
+         text-align: center;
+         background-color: #767676;
+         padding: 20px;
+         width: 200px;
+         border: 5px solid black;
+         border-radius: 10px;
+         position: relative;
+         bottom: 40px;
+         left: 200px;
+        }
+        .item3{
+         padding: 20px;
+        }
+        .item4{
+         padding: 20px;
+        }
+        .item5{
+         padding: 20px;
+        }
+   </style>
+</head>
+<body>
+   <div class="grid-container">
+      <div class="item1">
+         <nav>
+            <div class="logo">
+                  <img src="apple-logo.png" alt="apple" width="70px"  >
+            </div>
+            <ul>
+               <li><a href="#">home</a></li>
+               <li><a href="#">about</a></li>
+               <li><a href="#">gallery</a></li>
+               <li><a href="#">blog</a></li>
+               <li><a href="#">contect</a></li>
+            </ul>
+            <div class="search">
+               <input type="search" placeholder="  search...">
+               <button class="btn">sign up</button>
+            </div>   
+         </nav>
+      </div>
+      <div class="item2"></div>
+      <div class="item3">
+         <div>
+            <img src="about2.jpg" alt="" width="100%">
+            <p>phone</p>
+         </div>
+      </div>
+      <div class="item4">
+         <div>
+            <img src="about2.jpg" alt="" width="100%">
+            <p>phone</p>
+         </div>
+      </div>
+      <div class="item5">
+         <div>
+            <img src="about2.jpg" alt="" width="100%">
+            <p>phone</p>
+         </div>
+      </div>
+      <div class="item6">
+         <footer>       
+            <div class="row">
+                <div class="col">
+                <img src="apple-logo.png" class="logo" height="60px" width="10px"style="margin-bottom: 30px; width: 80px;">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A iure architecto atque reiciendis nam recusandae, dolorum perspiciatis alias sequi voluptate officiis impedit fuga, corrupti voluptatum. Quam accusamus nulla obcaecati minus.</p>
+               </div>
+            <div class="col">
+                <h3>office <div class="underline"><span></span></div></h3>
+                <p>ITPL RODE</p>
+                <p>Whitefield, Bangalore</p>
+                <p>Karnatak, Pin 560066, India</p>
+                <p class="email-id">nirajjambucha2006@gamil.com</p>
+                <h4>+91 - 0123456789</h4>
+            </div>
+            <div class="col">
+                <h3>link <div class="underline"><span></span></div></h3>
+                <ul>
+                    <li style="margin-bottom: 12px;"><a href="">Home</a></li>
+                    <li style="margin-bottom: 12px;"><a href="">Services</a></li>
+                    <li style="margin-bottom: 12px;"><a href="">About Us</a></li>
+                    <li style="margin-bottom: 12px;"><a href="">Features</a></li>
+                    <li style="margin-bottom: 12px;"><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h3>email <div class="underline"><span></span></div></h3>
+                <form>
+                     <a href="mail.png"><img src="mail.png" alt="facebook"  width="30px" height="30px" class="far"></a>
+                    <input type="email" placeholder="enter your email id" style="height: 29px; width: 290px;" required >
+                    <button type="submit"><a href="right-arrow.png"><img src="right-arrow.png" alt="facebook"  width="20px" height="20px" class="fas"></a></button>
+                </form>
+                <div class="col-1">
+                    <i><a href="facebook.png"><img src="facebook.png" alt="facebook"  width="22px" height="22px"></a></i>
+                    <i><a href="whatsapp.png"><img src="whatsapp.png" alt="whatsapp" width="22px" height="22px"></a></i>
+                    <i><a href="instagram.png"><img src="instagram.png" alt="instagram" width="22px" height="22px"></a></i>
+                    <i><a href="twitter.png"><img src="twitter.png" alt="twitter" width="22px" height="22px"></a></i>
+              </div> 
+            </div>
+           </div>
+           <hr>
+           <p class="demo">created by - niraj jambucha @ thenx for visit</p>
+        </footer>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css</title>
+    <style>
+      div {
+        width: 150px;
+        height: 150px;
+        border: 1px solid black;
+        position: absolute;
+      }
+      #box1 {
+        background-color: aqua;
+        color: black;
+        text-align: center;
+        font-size: 25px;
+        top: 100px;
+        left: 50px;
+        z-index: 1;
+      }
+      #box2 {
+        background-color: yellow;
+        color: black;
+        text-align: center;
+        font-size: 25px;
+        top: 150px;
+        left: 100px;
+        z-index: 2;
+      }
+      #box3 {
+        background-color: green;
+        color: black;
+        text-align: center;
+        font-size: 25px;
+        top: 200px;
+        left: 150px;
+        z-index: 3;
+      }
+      #box4 {
+        background-color: black;
+        color: white;
+        text-align: center;
+        font-size: 25px;
+        top: 250px;
+        left: 200px;
+        z-index: 4;
+      }
+      .background {
+        background-image: url(img1.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        border: 4px solid black;
+        width: 1000px;
+        height: 250px;
+      }
+      .transbox {
+        margin: 50px;
+        background-color: white;
+        border: 2px solid black;
+        opacity: 0.4;
+      }
+      .background p {
+        margin: 8%;
+        padding: 10px;
+        font-weight: bold;
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2><li>z-index</li></h2>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div id="box4">box4</div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+
+    <h2><li>opecity</li></h2>
+    <div class="background">
+      <p class="transbox">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, aut? Lorem
+        ipsum dolor sit, amet consectetur adipisicing elit. Nobis, aspernatur!
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Earum, neque?
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis,
+        nisi! Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Voluptatum, temporibus? Lorem ipsum dolor sit amet consectetur,
+        adipisicing elit. Ipsa, fuga!
+      </p>
+    </div>
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+    <br /><br /><br /><br />
+
+  
+  </body>
+</html>

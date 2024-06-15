@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        ul{
+            background-color: black;
+            list-style: none;
+            overflow:hidden;
+        }
+        li{
+            float: left;
+        }
+        li a,.dropbtn{
+            text-decoration: none;
+            color:white;
+            padding: 14px 16px;
+            text-align: center;
+            display: inline-block;
+        }
+        li a:hover,.dropbtn:hover{
+            border-radius: 10px;
+            background-color: gray;
+            color: black;
+        }
+        .dropdown-content{
+            display: none;
+            background-color: rgb(77, 75, 75);
+            min-width:150px;
+            position: absolute;
+            z-index: 1; 
+            border-radius: 10px; 
+        }
+        .dropdown-content a{
+             color: white;
+             display: block;
+             text-align: center;
+        }
+        .dropdown-content a:hover{
+            color: white;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">gallery</a></li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">about</a>
+            <div class="dropdown-content">
+                <a href="#">Services</a>
+                <a href="#">about us</a>
+                <a href="#">gallery</a>
+                <a href="#">Contact</a>
+            </div>
+        </li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+</html>
